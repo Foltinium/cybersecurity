@@ -1,0 +1,228 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #e4e5e7;
+}
+
+header {
+    position: relative;
+    background-image: url(assets/5850994_3047867.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+    box-shadow: inset 0 0 32px 4px #0ff;
+    animation: header-pulse 5s infinite alternate ease-in-out;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h1 {
+    background: rgba(255, 255, 255, .33);
+    text-shadow: 0 0 8px #000;
+    padding: 2vh 0;
+    border-bottom: 2px solid #aaf;
+    margin: 0;
+}
+
+nav {
+    position: relative;
+    text-shadow: 0 0 4px #000;
+}
+
+.push {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    position: absolute;
+    top: 0;
+    right: 25%;
+    background: rgba(255, 255, 255, .25);
+    padding: 8px;
+    border: 1px solid #88f;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+    transform: translateX(25%);
+}
+
+.push li {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+.push a {
+    display: block;
+    color: #0ff;
+    text-decoration: none;
+    transition: all .33s;
+}
+
+.push a:hover {
+    color: #fff;
+}
+
+.push a:active {
+    color: #ffc885;
+}
+
+.push a:visited {
+    color: #ff80ff;
+}
+
+.push li::before,
+.push li::after {
+    transition: .33s ease-out;
+}
+
+.push li::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #00cfcf;
+    transform: translateX(-50%);
+}
+
+.push li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed #fff;
+}
+
+.push li:hover::before {
+    background: #0ff;
+    box-shadow: 0 0 2px 8px rgba(255, 255, 255, .25)
+}
+
+.push li:hover::after {
+    border-top: 2px solid #0ff;
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, .25);
+}
+
+/* #author {
+    position: absolute;
+    right: 25%;
+    top: 60%;
+    background: rgba(79, 178, 185, 0.5);
+    border: 2px dashed #0ff;
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    transform: translate(25%, -60%);
+} */
+
+h2 {
+    background-color: whitesmoke;
+    padding: 12px 0;
+    border-top: solid 2px #e5e5e5;
+    border-bottom: solid 2px #e5e5e5;
+    margin: 12px 0;
+}
+
+p {
+    background-color: #f5f5f5;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 16px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+}
+
+ol {
+    padding: 0;
+    margin: 16px 24px 16px 32px;
+}
+
+ol p {
+    margin: 16px 8px;
+}
+
+.big {
+    margin-left: 16px;
+    font-size: calc(1.2rem);
+    font-weight: bold;
+}
+
+ol>li>.big {
+    margin: 0;
+}
+
+h3 {
+    background-color: #fafafa;
+    padding: 8px 0 8px 24px;
+    border-top: dashed 2px rgba(32, 32, 32, 0.85);
+    border-bottom: dashed 2px rgba(32, 32, 32, 0.85)
+}
+
+#video-container {
+    position: relative;
+    width: 95%;
+    height: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 16px 0;
+    border: 2px dashed goldenrod;
+    box-shadow: 0 0 16px 1px #000;
+}
+
+#video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    padding: 40px 0;
+    background-color: #04f;
+    border-top: 2px #0b520b solid;
+    color: #fff;
+}
+
+footer p {
+    background-color: #08f;
+    border: 1px #fff solid;
+}
+
+@keyframes header-pulse {
+    from {
+        box-shadow: inset 0 0 32px 4px #0ff;
+    }
+
+    to {
+        box-shadow: inset 0 0 #0ff;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        background-image: url(assets/8015396_3825032.jpg);
+    }
+
+    .push {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .push a {
+        color: #ff8;
+    }
+}
